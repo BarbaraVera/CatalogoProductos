@@ -197,12 +197,12 @@
             <div class="relative bg-white rounded-lg shadow-xl max-w-4xl w-full mx-auto my-8 p-6 sm:p-8 transform transition-transform duration-300 scale-95" onclick="event.stopPropagation()">
                 <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors" aria-label="Cerrar modal">
                     <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        <path stroke="#e92933" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                    <div id="modal-image-container" class="relative overflow-hidden rounded-lg h-96">
+                    <div id="modal-image-container" class="relative overflow-hidden rounded-lg h-80 md:h-96">
                         <div id="modal-images" class="flex h-full transition-transform duration-500 ease-in-out">
                             </div>
                         <button id="prev-image" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white rounded-full p-2 cursor-pointer hover:bg-opacity-70">
@@ -218,15 +218,15 @@
                     </div>
                     
                     <div class="flex flex-col">
-                        <h2 id="modal-title" class="font-display text-3xl font-bold text-[var(--text-primary)]"></h2>
-                        <p id="modal-description" class="mt-2 text-[var(--text-secondary)]"></p>
+                        <h2 id="modal-title" class="font-display text-2xl sm:text-3xl font-bold text-[var(--text-primary)]"></h2>
+                        <p id="modal-description" class="mt-2 text-sm sm:text-base text-[var(--text-secondary)]"></p>
                         <div class="flex items-baseline justify-between mt-4">
-                            <p id="modal-unitprice-label" class="text-sm text-[var(--text-secondary)]"></p>
-                            <p id="modal-unitprice" class="text-3xl font-bold text-[var(--primary-color)]"></p>
+                            <p id="modal-unitprice-label" class="text-xs sm:text-sm text-[var(--text-secondary)]"></p>
+                            <p id="modal-unitprice" class="text-xl sm:text-2xl font-bold text-[var(--primary-color)]"></p>
                         </div>
                         <div class="flex items-baseline justify-between mt-4">
-                            <p id="modal-price-label" class="text-sm text-[var(--text-secondary)]"></p>
-                            <p id="modal-price" class="text-3xl font-bold text-[var(--primary-color)]"></p>
+                            <p id="modal-price-label" class="text-xs sm:text-sm text-[var(--text-secondary)]"></p>
+                            <p id="modal-price" class="text-xl sm:text-2xl font-bold text-[var(--primary-color)]"></p>
                         </div>
                         <a id="modal-whatsapp-link" href="#" target="_blank" class="mt-8 inline-flex items-center justify-center bg-green-500 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-green-600 transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="44" height="44" viewBox="0 0 48 48">

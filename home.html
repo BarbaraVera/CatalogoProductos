@@ -23,6 +23,12 @@
       .font-display {
         font-family: "Playfair Display", serif;
       }
+      .modal-hidden {
+          display: none;
+      }
+      .modal-visible {
+          display: flex;
+      }
     </style>
 </head>
 <body class="bg-[var(--background-color)] text-[var(--text-primary)]">
@@ -50,14 +56,15 @@
                     </div>
                 </div>
             </div>
+            
             <div id="seccion-salados" class="mt-20 mb-12 text-center">
-                 <h3 class="font-display text-3xl font-bold text-[var(--text-primary)] sm:text-4xl">
+                <h3 class="font-display text-3xl font-bold text-[var(--text-primary)] sm:text-4xl">
                     Nuestros Salados
                 </h3>
             </div>
-             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
                 
-                <div class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl">
+                <div class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl cursor-pointer" onclick="openModal('Empanadas de Pino (Horno)', 'Empanadas de horno tradicionales con pino jugoso y masa casera.', '$12.000', 'Precio (docena)', 'https://i.ibb.co/7Jbbn0nF/Whats-App-Image-2025-08-13-at-10-20-12.jpg', ['https://i.ibb.co/7Jbbn0nF/Whats-App-Image-2025-08-13-at-10-20-12.jpg'])">
                     <div class="relative">
                         <img alt="Empanadas de Pino" class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://i.ibb.co/7Jbbn0nF/Whats-App-Image-2025-08-13-at-10-20-12.jpg" />
                     </div>
@@ -72,7 +79,7 @@
                     </div>
                 </div>
 
-                <div class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl">
+                <div class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl cursor-pointer" onclick="openModal('Empanadas de Pino (Fritas)', 'Empanadas fritas con pino jugoso y masa casera.', '$10.000', 'Precio (docena)', 'https://i.ibb.co/tM4zDmcz/Whats-App-Image-2025-08-13-at-10-20-15.jpg', [ 'https://i.ibb.co/ksZG6qhf/Whats-App-Image-2025-08-13-at-10-20-12-1.jpg'])">
                     <div class="relative">
                         <img alt="Quiche Lorraine" class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://i.ibb.co/tM4zDmcz/Whats-App-Image-2025-08-13-at-10-20-15.jpg" />
                     </div>
@@ -87,13 +94,13 @@
                     </div>
                 </div>
 
-                <div class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl">
+                <div class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl cursor-pointer" onclick="openModal('Pastel de choclo', 'Pastel de choclo delicioso.', '$3.500', 'Precio (unitario)', 'https://i.ibb.co/q3rTVsrt/Whats-App-Image-2025-08-13-at-10-20-16-1.jpg', ['https://i.ibb.co/bg9Lj6zs/Whats-App-Image-2025-08-13-at-10-20-13-1.jpg'])">
                     <div class="relative">
                         <img alt="Sándwiches de Miga" class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://i.ibb.co/q3rTVsrt/Whats-App-Image-2025-08-13-at-10-20-16-1.jpg" />
                     </div>
                     <div class="flex-1 p-5 flex flex-col">
                         <div class="flex-1">
-                            <h3 class="font-display text-2xl font-bold text-[var(--text-primary)]">Pastel de choclo </h3>
+                            <h3 class="font-display text-2xl font-bold text-[var(--text-primary)]">Pastel de choclo</h3>
                             <p class="mt-2 mb-4 text-sm text-[var(--text-secondary)]">Pastel de choclo delicioso.</p>
                         </div>
                         <div class="mt-auto">
@@ -101,31 +108,16 @@
                         </div>
                     </div>
                 </div>
-                <!----
-                <div class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl">
-                    <div class="relative">
-                        <img alt="Chaparritas" class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://images.pexels.com/photos/8135933/pexels-photo-8135933.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-                    </div>
-                    <div class="flex-1 p-5 flex flex-col">
-                        <div class="flex-1">
-                            <h3 class="font-display text-2xl font-bold text-[var(--text-primary)]">Chaparritas</h3>
-                            <p class="mt-2 mb-4 text-sm text-[var(--text-secondary)]">Deliciosas vienecitas envueltas en queso y masa horneada.</p>
-                        </div>
-                        <div class="mt-auto">
-                            <div class="flex items-baseline justify-between"><p class="text-sm text-[var(--text-secondary)]">Precio (docena)</p><p class="text-2xl font-bold text-[var(--primary-color)]">$7.000</p></div>
-                        </div>
-                    </div>
-                </div>
---->
             </div>
+            
             <div id="seccion-dulces" class="mt-20 mb-12 text-center">
-                 <h3 class="font-display text-3xl font-bold text-[var(--text-primary)] sm:text-4xl">
+                <h3 class="font-display text-3xl font-bold text-[var(--text-primary)] sm:text-4xl">
                     Nuestros Dulces
                 </h3>
             </div>
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 
-                <div class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl">
+                <div class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl cursor-pointer" onclick="openModal('Hojarasca', 'Deliciosa hojarasca para alfajores.', '$4.000', 'Precio unitario', 'https://i.ibb.co/Fk08dqJp/Whats-App-Image-2025-08-13-at-10-20-12-2.jpg', ['https://i.ibb.co/Fk08dqJp/Whats-App-Image-2025-08-13-at-10-20-12-2.jpg'])">
                     <div class="relative">
                         <img alt="Pastel de Chocolate" class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://i.ibb.co/Fk08dqJp/Whats-App-Image-2025-08-13-at-10-20-12-2.jpg" />
                     </div>
@@ -140,13 +132,13 @@
                     </div>
                 </div>
 
-                <div class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl">
+                <div class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl cursor-pointer" onclick="openModal('Galletas', 'Docena de galletas crujientes y saludables.', '$8.000', 'Precio (docena)', 'https://i.ibb.co/MxpGFrhZ/Whats-App-Image-2025-08-13-at-10-20-16.jpg', ['https://i.ibb.co/n8nWqypG/Whats-App-Image-2025-08-13-at-10-20-14.jpg'])">
                     <div class="relative">
                         <img alt="Galletas de Avena" class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://i.ibb.co/MxpGFrhZ/Whats-App-Image-2025-08-13-at-10-20-16.jpg" />
                     </div>
                     <div class="flex-1 p-5 flex flex-col">
                         <div class="flex-1">
-                            <h3 class="font-display text-2xl font-bold text-[var(--text-primary)]">Galletas </h3>
+                            <h3 class="font-display text-2xl font-bold text-[var(--text-primary)]">Galletas</h3>
                             <p class="mt-2 mb-4 text-sm text-[var(--text-secondary)]">Docena de galletas crujientes y saludables.</p>
                         </div>
                         <div class="mt-auto">
@@ -155,7 +147,7 @@
                     </div>
                 </div>
 
-                <div class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl">
+                <div class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl cursor-pointer" onclick="openModal('Pajaritos', 'Deliciosos pajaritos con merengue y manjar.', '$12.000', 'Precio unitario', 'https://i.ibb.co/4ZDwkT3N/Whats-App-Image-2025-08-13-at-10-20-14-1.jpg', ['https://i.ibb.co/1GTbPzDy/Whats-App-Image-2025-08-13-at-10-20-17.jpg'])">
                     <div class="relative">
                         <img alt="Tarta de Manzana" class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://i.ibb.co/4ZDwkT3N/Whats-App-Image-2025-08-13-at-10-20-14-1.jpg" />
                     </div>
@@ -170,7 +162,7 @@
                     </div>
                 </div>
 
-                <div class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl">
+                <div class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl cursor-pointer" onclick="openModal('Pan de pascua', 'aqui una descripcion.', '$3.500', 'Precio unitario', 'https://i.ibb.co/0V67xhbr/Whats-App-Image-2025-08-13-at-10-20-17-1.jpg', ['https://i.ibb.co/0V67xhbr/Whats-App-Image-2025-08-13-at-10-20-17-1.jpg'])">
                     <div class="relative">
                         <img alt="Mousse de Frambuesa" class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://i.ibb.co/0V67xhbr/Whats-App-Image-2025-08-13-at-10-20-17-1.jpg" />
                     </div>
@@ -184,69 +176,50 @@
                         </div>
                     </div>
                 </div>
-<!-----------
-                <div class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl">
-                    <div class="relative">
-                        <img alt="Pastel de Vainilla" class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-                    </div>
-                    <div class="flex-1 p-5 flex flex-col">
-                        <div class="flex-1">
-                            <h3 class="font-display text-2xl font-bold text-[var(--text-primary)]">Pajaritos</h3>
-                            <p class="mt-2 mb-4 text-sm text-[var(--text-secondary)]">aqui una descripcion.</p>
-                        </div>
-                        <div class="mt-auto">
-                           <div class="flex items-baseline justify-between"><p class="text-sm text-[var(--text-secondary)]">Precio unitario</p><p class="text-2xl font-bold text-[var(--primary-color)]">$14.000</p></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl">
-                    <div class="relative">
-                        <img alt="Galletas de Chispas de Chocolate" class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-                    </div>
-                    <div class="flex-1 p-5 flex flex-col">
-                        <div class="flex-1">
-                            <h3 class="font-display text-2xl font-bold text-[var(--text-primary)]">Berlines</h3>
-                            <p class="mt-2 mb-4 text-sm text-[var(--text-secondary)]">aqui una descripcion.</p>
-                        </div>
-                        <div class="mt-auto">
-                            <div class="flex items-baseline justify-between"><p class="text-sm text-[var(--text-secondary)]">Precio (docena)</p><p class="text-2xl font-bold text-[var(--primary-color)]">$9.000</p></div>
-                        </div>
-                    </div>
-                </div>
+            </div>
+        </main>
+        
+        <div id="product-modal" class="modal-hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 p-4 overflow-y-auto" onclick="closeModal()">
+            <div class="relative bg-white rounded-lg shadow-xl max-w-4xl w-full mx-auto my-8 p-6 sm:p-8 transform transition-transform duration-300 scale-95" onclick="event.stopPropagation()">
+                <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors" aria-label="Cerrar modal">
+                    <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
                 
-                <div class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl">
-                    <div class="relative">
-                        <img alt="Tarta de Limón" class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                    <div id="modal-image-container" class="relative overflow-hidden rounded-lg h-96">
+                        <div id="modal-images" class="flex h-full transition-transform duration-500 ease-in-out">
+                            </div>
+                        <button id="prev-image" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white rounded-full p-2 cursor-pointer hover:bg-opacity-70">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button id="next-image" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white rounded-full p-2 cursor-pointer hover:bg-opacity-70">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
                     </div>
-                    <div class="flex-1 p-5 flex flex-col">
-                        <div class="flex-1">
-                            <h3 class="font-display text-2xl font-bold text-[var(--text-primary)]">Hojarasca</h3>
-                            <p class="mt-2 mb-4 text-sm text-[var(--text-secondary)]">aqui una descripcion.</p>
+                    
+                    <div class="flex flex-col">
+                        <h2 id="modal-title" class="font-display text-3xl font-bold text-[var(--text-primary)]"></h2>
+                        <p id="modal-description" class="mt-2 text-[var(--text-secondary)]"></p>
+                        <div class="flex items-baseline justify-between mt-4">
+                            <p id="modal-price-label" class="text-sm text-[var(--text-secondary)]"></p>
+                            <p id="modal-price" class="text-3xl font-bold text-[var(--primary-color)]"></p>
                         </div>
-                        <div class="mt-auto">
-                            <div class="flex items-baseline justify-between"><p class="text-sm text-[var(--text-secondary)]">Precio unitario</p><p class="text-2xl font-bold text-[var(--primary-color)]">$13.000</p></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl">
-                    <div class="relative">
-                        <img alt="Flan de Caramelo" class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://images.pexels.com/photos/10985131/pexels-photo-10985131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-                    </div>
-                    <div class="flex-1 p-5 flex flex-col">
-                        <div class="flex-1">
-                            <h3 class="font-display text-2xl font-bold text-[var(--text-primary)]">algo</h3>
-                            <p class="mt-2 mb-4 text-sm text-[var(--text-secondary)]">aqui una descripcion.</p>
-                        </div>
-                        <div class="mt-auto">
-                            <div class="flex items-baseline justify-between"><p class="text-sm text-[var(--text-secondary)]">Precio unitario</p><p class="text-2xl font-bold text-[var(--primary-color)]">$2.000</p></div>
-                        </div>
+                        <a id="modal-whatsapp-link" href="#" target="_blank" class="mt-8 inline-flex items-center justify-center bg-green-500 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-green-600 transition-colors">
+                            <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48">
+                                <path fill="#fff" d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6    C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z"></path><path fill="#fff" d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6       C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3    L5,43.8C5,43.8,4.9,43.8,4.9,43.8z"></path><path fill="#cfd8dc" d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3 L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24   c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2     c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z"></path><path fill="#40c351" d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8        l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"></path><path fill="#fff" fill-rule="evenodd" d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0        s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3  c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9        c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8        c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z" clip-rule="evenodd"></path>
+                            </svg>
+                            ¡Hacer un pedido!
+                        </a>
                     </div>
                 </div>
             </div>
------->
-        </main>
+        </div>
         
         <footer class="bg-[var(--text-primary)] text-white">
     <div class="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
@@ -271,12 +244,12 @@
                       </svg>
                   </a>
               </div>
-              </div>
+            </div>
 
             <div class="text-center md:text-right">
                 <h3 class="font-bold text-lg">¿Quieres hacer un pedido?</h3>
                 <p class="text-gray-300">Contáctanos por WhatsApp</p>
-                <a href="https://api.whatsapp.com/send?phone=569TUNUMERO&text=Hola!%20Me%20interesan%20sus%20productos%20del%20catálogo." target="_blank" class="font-bold text-lg text-[var(--accent-color)] hover:underline">
+                <a href="https://api.whatsapp.com/send?phone=56948408085&text=Hola!%20Me%20interesan%20sus%20productos%20del%20catálogo." target="_blank" class="font-bold text-lg text-[var(--accent-color)] hover:underline">
                     +56 9 
                 </a>
             </div>
@@ -285,13 +258,98 @@
 </footer>
     </div>
 
-    <a href="https://api.whatsapp.com/send?phone=569TUNUMERO&text=Hola!%20Me%20interesan%20sus%20productos%20del%20catálogo." target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 transition-transform duration-300 hover:scale-110 z-50 flex items-center justify-center" aria-label="Contactar por WhatsApp">
+    <a href="https://api.whatsapp.com/send?phone=56948408085&text=Hola!%20Me%20interesan%20sus%20productos%20del%20catálogo." target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 transition-transform duration-300 hover:scale-110 z-50 flex items-center justify-center" aria-label="Contactar por WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="28" height="28" viewBox="0 0 48 48">
-          <path fill="#fff" d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6 	 C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z"></path><path fill="#fff" d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6 		C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3 	 L5,43.8C5,43.8,4.9,43.8,4.9,43.8z"></path><path fill="#cfd8dc" d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3 L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24 	 c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2 	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z"></path><path fill="#40c351" d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8 	 	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"></path><path fill="#fff" fill-rule="evenodd" d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0 		s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3 	c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9 		c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8 		c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z" clip-rule="evenodd"></path>
+          <path fill="#fff" d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6    C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z"></path><path fill="#fff" d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6       C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3    L5,43.8C5,43.8,4.9,43.8,4.9,43.8z"></path><path fill="#cfd8dc" d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3 L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24   c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2     c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z"></path><path fill="#40c351" d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8        l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"></path><path fill="#fff" fill-rule="evenodd" d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0        s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3  c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9        c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8        c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z" clip-rule="evenodd"></path>
         </svg>
     </a>
     <script>
-      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+        const modal = document.getElementById('product-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDescription = document.getElementById('modal-description');
+        const modalPrice = document.getElementById('modal-price');
+        const modalPriceLabel = document.getElementById('modal-price-label');
+        const modalWhatsappLink = document.getElementById('modal-whatsapp-link');
+        const modalImagesContainer = document.getElementById('modal-images');
+        const modalImageCarousel = document.getElementById('modal-image-container'); 
+        const prevButton = document.getElementById('prev-image');
+        const nextButton = document.getElementById('next-image');
+        const whatsappNumber = "56948408085"; 
+        let currentIndex = 0;
+        let imagesArray = [];
+
+        function openModal(title, description, price, priceLabel, mainImage, additionalImages) {
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
+            modalPrice.textContent = price;
+            modalPriceLabel.textContent = priceLabel;
+
+            const allImages = [mainImage, ...additionalImages];
+            imagesArray = allImages;
+
+            const whatsappText = `Hola! Me gustaría más información sobre el producto: *${title}* que vi en su catálogo.`;
+            modalWhatsappLink.href = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(whatsappText)}`;
+
+            modalImagesContainer.innerHTML = ''; 
+            allImages.forEach(src => {
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = title;
+                img.classList.add('w-full', 'h-full', 'object-cover', 'rounded-lg', 'flex-shrink-0'); 
+                modalImagesContainer.appendChild(img);
+            });
+
+            currentIndex = 0;
+            updateCarousel();
+
+            updateNavigationButtons();
+
+            modal.classList.add('modal-visible');
+            modal.classList.remove('modal-hidden');
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closeModal() {
+            modal.classList.add('modal-hidden');
+            modal.classList.remove('modal-visible');
+            document.body.style.overflow = ''; 
+        }
+
+        function nextImage() {
+            if (currentIndex < imagesArray.length - 1) {
+                currentIndex++;
+                updateCarousel();
+                updateNavigationButtons();
+            }
+        }
+
+        function prevImage() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+                updateNavigationButtons();
+            }
+        }
+
+        function updateCarousel() {
+            const translateX = -currentIndex * 100 + '%';
+            modalImagesContainer.style.transform = `translateX(${translateX})`;
+        }
+
+        function updateNavigationButtons() {
+            if (imagesArray.length <= 1) {
+                prevButton.style.display = 'none';
+                nextButton.style.display = 'none';
+            } else {
+                prevButton.style.display = currentIndex > 0 ? 'block' : 'none';
+                nextButton.style.display = currentIndex < imagesArray.length - 1 ? 'block' : 'none';
+            }
+        }
+
+        prevButton.addEventListener('click', prevImage);
+        nextButton.addEventListener('click', nextImage);
     </script>
 </body>
 </html>
